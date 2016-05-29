@@ -8,11 +8,11 @@ module ProcessData
 		data.delete_at(0)
 		if data.size == 1
 			data = data[0].split(" ")
-			data.map! { |item| item.to_i }
+			data.map! { |item| item.to_f }
 		else
 			data.map! do |item|
 				item = item.split(" ")
-				item.map! { |value| value.to_i }
+				item.map! { |value| value.to_f }
 			end
 		end
 		data
