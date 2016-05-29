@@ -1,3 +1,5 @@
+require 'rspec'
 require_relative '../lib/modules/process_data.rb'
 require_relative '../lib/exercises/arithmetic_progression.rb'
 require_relative '../lib/exercises/array_checksum.rb'
+require_relative '../lib/exercises/average_of_array.rb'

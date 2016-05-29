@@ -1,4 +1,3 @@
-require 'rspec'
 require_relative '../spec_helper'
 
 RSpec.describe ArithmeticProgression do
