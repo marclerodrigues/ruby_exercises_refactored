@@ -8,15 +8,11 @@ module ProcessData
 		data.delete_at(0)
 		if data.size == 1
 			data = data[0].split(" ")
-			for i in 0...data.size
-				data[i] = data[i].to_i
-			end
+			data.map! { |item| item.to_i }
 		else
-			for i in 0...data.size
-				data[i] = data[i].split(" ")
-				for n in 0...data[i].size
-					data[i][n] = data[i][n].to_i
-				end
+			data.map! do |item|
+				item = item.split(" ")
+				item.map! { |value| value.to_i }
 			end
 		end
 		data
