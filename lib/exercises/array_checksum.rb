@@ -2,7 +2,7 @@ require_relative '../modules/process_data.rb'
 
 module ArrayChecksum
 	include ProcessData
-	def self.new (data)
+	def self.calculate (data)
 		sanitized = ProcessData::Sanitize(data)
 		sanitized.map! { |value| value.to_i }
 		result = 0

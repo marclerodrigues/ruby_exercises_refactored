@@ -18,7 +18,7 @@ module BodyMassIndex
     end
   end
 
-  def self.new (data)
+  def self.calculate (data)
     results = []
     sanitized = ProcessData::Sanitize(data)
     sanitized.each do |values|

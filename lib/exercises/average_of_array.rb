@@ -1,7 +1,7 @@
 require_relative '../modules/process_data'
 module AverageOfArray
   include ProcessData
-  def self.new (data)
+  def self.calculate (data)
     sanitized = ProcessData::Sanitize(data)
     results = []
     sanitized.each do |pair|
