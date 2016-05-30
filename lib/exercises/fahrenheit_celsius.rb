@@ -1,14 +1,10 @@
+require_relative '../modules/process_data'
+
 module FahrenheitCelsius
-  class Fahrenheit
-    def sanitize_data data
-      data = data.split(" ")
-      data.delete_at(0)
-      data.map! { |value| value.to_f }
-    end
-  end
+  include ProcessData
   def self.convert data
-    sanitized = Fahrenheit.new
-    sanitized = sanitized.sanitize_data data
+    sanitized = ProcessData::SanitizeWithoutHead(data)
+    sanitized.delete_at(0)
     sanitized.map! { |value| ((value - 32) * 5 / 9 ).round}
   end
 end

@@ -17,4 +17,9 @@ module ProcessData
 		end
 		data
 	end
+
+	def self.SanitizeWithoutHead(data)
+		data = data.split(" ")
+		data.map! { |value| value.to_f }
+	end
 end
