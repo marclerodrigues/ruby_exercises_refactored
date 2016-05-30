@@ -6,7 +6,7 @@ module FahrenheitCelsius
       data.map! { |value| value.to_f }
     end
   end
-  def self.calculate data
+  def self.convert data
     sanitized = Fahrenheit.new
     sanitized = sanitized.sanitize_data data
     sanitized.map! { |value| ((value - 32) * 5 / 9 ).round}

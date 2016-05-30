@@ -3,7 +3,7 @@ require_relative '../spec_helper'
 RSpec.describe FahrenheitCelsius do
   before :each do
     input_data = "5 495 353 168 -39 22"
-    @results = FahrenheitCelsius::calculate(input_data)
+    @results = FahrenheitCelsius::convert(input_data)
   end
 
   it 'returns the correct result' do
